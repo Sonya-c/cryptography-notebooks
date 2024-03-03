@@ -25,7 +25,7 @@ assert("expa" == int_to_text(0x61707865)[::-1]), "Error"
 # Chatgpt assited generated code 
 # Do no ask me how it works
 
-def to_words(value: int,
+def get_words(value: int,
              word_size: int,
              words_num: int) -> List[int]:
     
@@ -43,7 +43,7 @@ def to_words(value: int,
     
     return words
 
-assert(to_words(0x112233445566778899aabbccddeeff00, 32, 8) == [0x0, 0x0, 0x0, 0x0, 0x11223344, 0x55667788, 0x99aabbcc, 0xddeeff00]), "Error"
+assert(get_words(0x112233445566778899aabbccddeeff00, 32, 8) == [0x0, 0x0, 0x0, 0x0, 0x11223344, 0x55667788, 0x99aabbcc, 0xddeeff00]), "Error"
 
 
 def from_words(words: List[int], word_size: int) -> int:
