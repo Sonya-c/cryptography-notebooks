@@ -1,6 +1,13 @@
 
 from typing import List, Tuple
 
+
+def sum32(a: int, b: int) -> int:
+    # Suma mod 2^32
+    return (a + b) & ((1 << 32) - 1)
+
+assert(sum32(2**32, 3) == 3), "Error"
+
 def text_to_int(string: str) -> int:
     # I copy this from StackOverFlow
     nchars = len(string)
